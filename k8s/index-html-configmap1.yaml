@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: index-html-configmap1.yaml
+  namespace: default
+data:
+  index.html: |
+    <html>
+      <h1> Hello there! This is a Test for Deployment one
+    </html>
