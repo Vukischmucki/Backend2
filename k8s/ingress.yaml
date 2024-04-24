@@ -14,7 +14,7 @@ spec:
                 name: grafana
                 port:
                   number: 3000
-    - host: 85.6.171.5:30002
+    - host: jira.ch
       http:
         paths:
           - pathType: Prefix
@@ -24,8 +24,7 @@ spec:
                 name: jira
                 port:
                   number: 8080
-    - host: 85.6.171.5:30003
-
+    - host: mediawiki.hopto.org 
       http:
         paths:
           - pathType: Prefix
@@ -45,7 +44,7 @@ spec:
                 name: prometheus
                 port:
                   number: 9090
-    - host: 85.6.171.5
+    - host: wordpress.example.com
       http:
         paths:
           - pathType: Prefix
