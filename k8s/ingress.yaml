@@ -1,56 +1,16 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: example-ingress
+  name: mediawiki-ingress
 spec:
   rules:
-    - host: grafana.mydomain.com
-      http:
-        paths:
-          - pathType: Prefix
-            path: "/"
-            backend:
-              service:
-                name: grafana
-                port:
-                  number: 3000
-    - host: jira.ch
-      http:
-        paths:
-          - pathType: Prefix
-            path: "/"
-            backend:
-              service:
-                name: jira
-                port:
-                  number: 8080
-    - host: mediawiki.hopto.org 
-      http:
-        paths:
-          - pathType: Prefix
-            path: "/"
-            backend:
-              service:
-                name: mediawiki
-                port:
-                  number: 80
-    - host: prometheus.mydomain.com
-      http:
-        paths:
-          - pathType: Prefix
-            path: "/"
-            backend:
-              service:
-                name: prometheus
-                port:
-                  number: 9090
-    - host: wordpress.example.com
-      http:
-        paths:
-          - pathType: Prefix
-            path: "/"
-            backend:
-              service:
-                name: wordpress
-                port:
-                  number: 80
+  - host: mediawiki.hopto.org
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: mediawiki
+            port:
+              number: 80
