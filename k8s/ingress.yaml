@@ -10,37 +10,10 @@ spec:
       http:
         paths:
           - pathType: Prefix
-            path: /grafana
-            backend:
-              service:
-                name: grafana
-                port:
-                  number: 3000
-          - pathType: Prefix
             path: /jira
             backend:
               service:
                 name: jira
                 port:
                   number: 8080
-          - pathType: Prefix
-            path: /mediawiki
-            backend:
-              service:
-                name: mediawiki
-                port:
-                  number: 80
-          - pathType: Prefix
-            path: /prometheus
-            backend:
-              service:
-                name: prometheus
-                port:
-                  number: 9090
-          - pathType: Prefix
-            path: /service/wordpress
-            backend:
-              service:
-                name: wordpress
-                port:
-                  number: 80
+       
